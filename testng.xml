@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AllTestsSuite">
+    <test name="MainCategory">
+        <classes>
+            <class name="MainCategory"/>
+        </classes>
+    </test>
+    <test name="VerifyPDPs">
+        <classes>
+            <class name="VerifyPDPs"/>
+        </classes>
+    </test>
+</suite>
