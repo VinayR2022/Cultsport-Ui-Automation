@@ -7,7 +7,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.List;
 
 public class VerifyPDPs extends BaseTest {
 
@@ -15,32 +14,6 @@ public class VerifyPDPs extends BaseTest {
     public void setUp() {
         initializeDriver();
     }
-
-    private void clickOnDeliveryAvailability(String pincode) throws InterruptedException {
-        scrollUntilElementClickable(By.xpath("//*[contains(text(), 'Check delivery availability')]"));
-        WebElement pincodeInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("style-prefix-ux5z5z")));
-        pincodeInput.click();
-        pincodeInput.clear();
-        pincodeInput.sendKeys(pincode);
-        WebElement pincodeCheck = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(), 'Check delivery availability')]")));
-        Thread.sleep(2000);
-        pincodeCheck.click();
-        pincodeCheck.click();
-    }
-
-    private void clickOnFirstAvailableSize() {
-        WebElement sizeContainer = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("style-prefix-d97jto")));
-        List<WebElement> sizeElements = sizeContainer.findElements(By.className("style-prefix-4eq6st"));
-        for (WebElement sizeElement : sizeElements) {
-            if (!sizeElement.getAttribute("class").contains("out-of-stock")) {
-                sizeElement.click();
-                break;
-            }
-        }
-    }
-
-
-
 
 
     @Test
@@ -119,7 +92,7 @@ public class VerifyPDPs extends BaseTest {
     }
 
     @Test
-    public void CardioPDP() throws InterruptedException {
+    public void CardioPDP() {
         driver.get("https://cultsport.com/treadmills");
 
         scrollUntilElementClickable(By.xpath("//div[contains(@class, 'style-prefix-1ea0jd6') and contains(text(), 'cult')]")).click();
@@ -150,6 +123,8 @@ public class VerifyPDPs extends BaseTest {
         Assert.assertTrue(brand.isDisplayed(), "Cycle's Brand element displayed");
 
         clickOnDeliveryAvailability("560060");
+
+        Thread.sleep(2000);
 
         scrollUntilElementClickable(By.xpath(("//*[contains(text(), 'Specifications')]")));
         WebElement Specs = wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath(("//*[contains(@class, 'style-prefix-1aas2g5')]")))));

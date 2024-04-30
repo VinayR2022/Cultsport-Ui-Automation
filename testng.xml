@@ -1,5 +1,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="AllTestsSuite">
+    <listeners>
+        <listener class-name="org.testng.reporters.XMLReporter"/>
+        <listener class-name="org.testng.reporters.JUnitXMLReporter"/>
+        <listener class-name="org.testng.reporters.EmailableReporter"/>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
     <test name="MainCategory">
         <classes>
             <class name="MainCategory"/>
@@ -8,6 +14,11 @@
     <test name="VerifyPDPs">
         <classes>
             <class name="VerifyPDPs"/>
+        </classes>
+    </test>
+    <test name="Checkout">
+        <classes>
+            <class name="Checkout"/>
         </classes>
     </test>
 </suite>

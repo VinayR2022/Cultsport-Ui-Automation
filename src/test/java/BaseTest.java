@@ -6,9 +6,14 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
+
+import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
+import java.util.List;
+import org.apache.commons.io.FileUtils;
 
 
 public class BaseTest {
@@ -29,6 +34,7 @@ public class BaseTest {
         options.setCapability(MobileCapabilityType.DEVICE_NAME, "N000TA1183962301141");
         options.setCapability(MobileCapabilityType.BROWSER_VERSION, "106");
 
+
         // Set Appium server address
         try {
             url = new URL("http://localhost:4723/wd/hub");
@@ -43,13 +49,12 @@ public class BaseTest {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-//    @AfterMethod
-//    public void tearDown() {
-//        // Close the browser
-//        if (driver != null) {
-//            driver.quit();
-//        }
-//    }
+    @AfterMethod
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 
 
     // Method to scroll down the page until the element is clickable
@@ -72,6 +77,7 @@ public class BaseTest {
         }
         return element;
     }
+
     protected void handlePopup() {
         // Check if the popup is present
         try {
@@ -85,5 +91,31 @@ public class BaseTest {
             // Popup not found or not displayed, continue with the test
         }
     }
+
+    protected WebElement clickOnDeliveryAvailability(String pincode) throws InterruptedException {
+        scrollUntilElementClickable(By.xpath("//*[contains(text(), 'Check delivery availability')]"));
+        WebElement pincodeInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("style-prefix-ux5z5z")));
+        pincodeInput.click();
+        pincodeInput.clear();
+        pincodeInput.sendKeys(pincode);
+        WebElement pincodeCheck = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(), 'Check delivery availability')]")));
+        Thread.sleep(2000);
+        pincodeCheck.click();
+        pincodeCheck.click();
+        return pincodeCheck;
+    }
+
+    protected WebElement clickOnFirstAvailableSize() {
+        WebElement sizeContainer = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("style-prefix-d97jto")));
+        List<WebElement> sizeElements = sizeContainer.findElements(By.className("style-prefix-4eq6st"));
+        for (WebElement sizeElement : sizeElements) {
+            if (!sizeElement.getAttribute("class").contains("out-of-stock")) {
+                sizeElement.click();
+                return sizeElement;
+            }
+        }
+        return null;
+    }
+
 
 }
