@@ -151,6 +151,8 @@ public class VerifyPDPs extends BaseTest {
 
         clickOnDeliveryAvailability("560060");
 
+        Thread.sleep(2000);
+
         scrollUntilElementClickable(By.xpath(("//*[contains(text(), 'Specifications')]")));
         WebElement Specs = wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath(("//*[contains(@class, 'style-prefix-1aas2g5')]")))));
         Assert.assertTrue(Specs.isDisplayed(), "Cycles's Specs element displayed");

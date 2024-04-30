@@ -17,8 +17,7 @@ public class MainCategory extends BaseTest {
     public void MainCategory() throws InterruptedException {
         driver.get("https://cultsport.com/");
 
-        WebElement Mens = driver.findElement(By.xpath("//img[@alt='womens-day-men']"));
-        Mens.click();
+        driver.findElement(By.xpath("//img[@alt='womens-day-men']")).click();
 
         WebElement MTshirt = wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Joggers")));
         wait.until(ExpectedConditions.visibilityOf(MTshirt));
