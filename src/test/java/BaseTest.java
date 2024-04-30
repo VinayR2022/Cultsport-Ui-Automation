@@ -29,6 +29,8 @@ public class BaseTest {
         options.setCapability(MobileCapabilityType.DEVICE_NAME, "N000TA1183962301141");
         options.setCapability(MobileCapabilityType.BROWSER_VERSION, "106");
 
+
+
         // Set Appium server address
         try {
             url = new URL("http://localhost:4723/wd/hub");
@@ -43,13 +45,13 @@ public class BaseTest {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-//    @AfterMethod
-//    public void tearDown() {
-//        // Close the browser
-//        if (driver != null) {
-//            driver.quit();
-//        }
-//    }
+    @AfterMethod
+    public void tearDown() {
+        // Close the browser
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 
 
     // Method to scroll down the page until the element is clickable
