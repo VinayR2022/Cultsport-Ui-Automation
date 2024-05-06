@@ -1,10 +1,15 @@
 // MenCategoryTest.java
+import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.io.ByteArrayInputStream;
 
 public class MainCategory extends BaseTest {
 
@@ -15,29 +20,32 @@ public class MainCategory extends BaseTest {
 
     @Test
     public void MainCategory() throws InterruptedException {
-        driver.get("https://cultsport.com/");
 
-        driver.findElement(By.xpath("//img[@alt='womens-day-men']")).click();
+            driver.get("https://cultsport.com/");
 
-        WebElement MTshirt = wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Joggers")));
-        wait.until(ExpectedConditions.visibilityOf(MTshirt));
-        MTshirt.click();
+            driver.findElement(By.xpath("//img[@alt='womens-day-men']")).click();
 
-        WebElement MTshirts = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(), '₹ 500 - ₹ 999')]")));
-        Assert.assertTrue(MTshirts.isDisplayed(), "Men's Joggers element is displayed");
+            WebElement MTshirt = wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Joggers")));
+            wait.until(ExpectedConditions.visibilityOf(MTshirt));
+            MTshirt.click();
 
-        driver.navigate().back();
-        driver.navigate().back();
+            WebElement MTshirts = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(), '₹ 500 - ₹ 999')]")));
+            Assert.assertTrue(MTshirts.isDisplayed(), "Men's Joggers element is displayed");
 
-        Thread.sleep(2000);
+            driver.navigate().back();
+            driver.navigate().back();
 
-        WebElement element = driver.findElement(By.xpath("//img[@alt='womens-day-women']"));
-        element.click();
+            Thread.sleep(2000);
 
-        WebElement Tshirt = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(text(), 'T-shirts')]")));
-        Tshirt.click();
+            WebElement element = driver.findElement(By.xpath("//img[@alt='womens-day-women']"));
+            element.click();
 
-        WebElement WTshirt = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(), '₹ 500 - ₹ 999')]")));
-        Assert.assertTrue(WTshirt.isDisplayed(), "Women's T-Shirts element is displayed");
+            WebElement Tshirt = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(text(), 'T-shirts')]")));
+            Tshirt.click();
+
+            WebElement WTshirt = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(), '₹ 500 - ₹ 999')]")));
+            Assert.assertTrue(WTshirt.isDisplayed(), "Women's T-Shirts element is displayed");
+
+
     }
 }
