@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 
-public clasVerifyPDPs extends BaseTest {
+public class VerifyPDPs extends BaseTest {
 
     @BeforeMethod
     public void setUp() {
