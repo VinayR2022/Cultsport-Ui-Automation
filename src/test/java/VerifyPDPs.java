@@ -40,7 +40,8 @@ public class VerifyPDPs extends BaseTest {
 
     @Test
     public void WomenPDP() throws InterruptedException {
-        driver.get("https://cultsport.com/womens-sportswear");
+        try {
+            driver.get("https://cultsport.com/womens-sportswear");
         scrollUntilElementClickable(By.xpath("//div[contains(@class, 'style-prefix-wlzv28') and contains(text(), 'cult')]")).click();
         WebElement brand = wait.until(ExpectedConditions.visibilityOfElementLocated((By.className("style-prefix-8ha1uc"))));
         Assert.assertTrue(brand.isDisplayed(), "Men's Brand element displayed");
@@ -58,12 +59,18 @@ public class VerifyPDPs extends BaseTest {
         addToCartButton.click();
         WebElement goToCartButton = driver.findElement(By.className("style-prefix-r6n4c1"));
         goToCartButton.click();
+    } catch (Exception e) {
+        captureScreenshot("guestCheckoutTest");
+        System.out.println("Exception occurred  Women PDP category: " + e.getMessage());
+        Assert.fail("Test failed: " + e.getMessage());
+    }
 
     }
 
     @Test
     public void FootwearPDP() throws InterruptedException {
-        driver.get("https://cultsport.com/footwear");
+       try {
+           driver.get("https://cultsport.com/footwear");
         WebElement targetElement = scrollUntilElementClickable(By.xpath("//div[contains(@class, 'style-prefix-wlzv28') and contains(text(), 'cult')]"));
         if (targetElement != null) {
             // Click using JavaScript to bypass potential click interceptors
@@ -88,12 +95,18 @@ public class VerifyPDPs extends BaseTest {
         addToCartButton.click();
         WebElement goToCartButton = driver.findElement(By.className("style-prefix-r6n4c1"));
         goToCartButton.click();
+    } catch (Exception e) {
+        captureScreenshot("guestCheckoutTest");
+        System.out.println("Exception occurred Men PDP category: " + e.getMessage());
+        Assert.fail("Test failed: " + e.getMessage());
+    }
 
     }
 
     @Test
     public void CardioPDP() {
-        driver.get("https://cultsport.com/treadmills");
+        try {
+            driver.get("https://cultsport.com/treadmills");
 
         scrollUntilElementClickable(By.xpath("//div[contains(@class, 'style-prefix-1ea0jd6') and contains(text(), 'cult')]")).click();
 
@@ -105,13 +118,19 @@ public class VerifyPDPs extends BaseTest {
 
         scrollUntilElementClickable(By.xpath(("//*[contains(text(), 'Specifications')]")));
         handlePopup();
+    } catch (Exception e) {
+        captureScreenshot("guestCheckoutTest");
+        System.out.println("Exception occurred Cardio PDP category: " + e.getMessage());
+        Assert.fail("Test failed: " + e.getMessage());
+    }
 
 
     }
 
     @Test
     public void CyclePDP() throws InterruptedException {
-        driver.get("https://cultsport.com/cycles");
+        try {
+            driver.get("https://cultsport.com/cycles");
         WebElement targetElement = scrollUntilElementClickable(By.xpath("//div[contains(@class, 'style-prefix-1mchdjx') or contains(@class, 'style-prefix-1ea0jd6') and contains(text(), 'cult')]"));
         if (targetElement != null) {
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", targetElement);
@@ -132,6 +151,11 @@ public class VerifyPDPs extends BaseTest {
 
         WebElement addToCartButton = driver.findElement(By.className("style-prefix-1gdrvzp"));
         addToCartButton.click();
+    } catch (Exception e) {
+        captureScreenshot("guestCheckoutTest");
+        System.out.println("Exception occurred Cycle PDP category: " + e.getMessage());
+        Assert.fail("Test failed: " + e.getMessage());
+    }
     }
 
 
