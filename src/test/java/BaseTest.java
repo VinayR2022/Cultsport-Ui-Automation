@@ -1,12 +1,15 @@
 // BaseTest.java
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.qameta.allure.Allure;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -14,6 +17,9 @@ import java.net.URL;
 import java.time.Duration;
 import java.util.List;
 import org.apache.commons.io.FileUtils;
+import org.testng.annotations.BeforeMethod;
+
+import static org.openqa.selenium.devtools.v104.page.Page.captureScreenshot;
 
 
 public class BaseTest {
@@ -21,6 +27,12 @@ public class BaseTest {
     protected WebDriver driver;
     protected WebDriverWait wait;
     private URL url;
+
+    @BeforeMethod
+    public void setUp() {
+        deleteOldReportFiles();
+        initializeDriver();
+    }
 
     protected void initializeDriver() {
         // Set ChromeDriver path
@@ -48,15 +60,22 @@ public class BaseTest {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
+// Close after every test
     @AfterMethod
-    public void tearDown() {
+    public void tearDown(ITestResult result) {
+        if (result.getStatus() == ITestResult.FAILURE) {
+            captureScreenshot(result.getName());
+        }
+        tearDown();
+    }
+
+    protected void tearDown() {
         if (driver != null) {
             driver.quit();
         }
     }
 
-
-    // Method to scroll down the page until the element is clickable
+// Method to scroll down the page until the element is clickable
     protected WebElement scrollUntilElementClickable(By locator) {
         WebElement element = null;
         int maxScrollAttempts = 10;
@@ -76,6 +95,7 @@ public class BaseTest {
         }
         return element;
     }
+//Handle Popup
     protected void handlePopup() {
         // Check if the popup is present
         try {
@@ -86,10 +106,11 @@ public class BaseTest {
                 closeButton.click();
             }
         } catch (NoSuchElementException | TimeoutException e) {
-            // Popup not found or not displayed, continue with the test
+
         }
     }
 
+//Check Delivery on PDP
     protected WebElement clickOnDeliveryAvailability(String pincode) throws InterruptedException {
         scrollUntilElementClickable(By.xpath("//*[contains(text(), 'Check delivery availability')]"));
         WebElement pincodeInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("style-prefix-ux5z5z")));
@@ -102,7 +123,7 @@ public class BaseTest {
         pincodeCheck.click();
         return pincodeCheck;
     }
-
+//Size selector in PDPD
     protected WebElement clickOnFirstAvailableSize() {
         WebElement sizeContainer = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("style-prefix-d97jto")));
         List<WebElement> sizeElements = sizeContainer.findElements(By.className("style-prefix-4eq6st"));
@@ -114,3 +135,32 @@ public class BaseTest {
         }
         return null;
     }
+// Delete Old Allure result
+    protected void deleteOldReportFiles() {
+        File allureResultsDir = new File("allure-results");
+        if (allureResultsDir.exists()) {
+            File[] files = allureResultsDir.listFiles();
+            if (files != null) {
+                for (File file : files) {
+                    if (file.isFile()) {
+                        file.delete();
+                    }
+                }
+            }
+        }
+    }
+// Capture screenshot method for failed report
+    void captureScreenshot(String testName) {
+        try {
+            TakesScreenshot ts = (TakesScreenshot) driver;
+            byte[] screenshot = ts.getScreenshotAs(OutputType.BYTES);
+            Allure.addAttachment(testName + "_screenshot", new ByteArrayInputStream(screenshot));
+        } catch (Exception e) {
+            System.out.println("Failed to capture screenshot: " + e.getMessage());
+        }
+    }
+
+}
+
+
+

@@ -20,7 +20,7 @@ public class MainCategory extends BaseTest {
 
     @Test
     public void MainCategory() throws InterruptedException {
-
+try{
             driver.get("https://cultsport.com/");
 
             driver.findElement(By.xpath("//img[@alt='womens-day-men']")).click();
@@ -45,7 +45,11 @@ public class MainCategory extends BaseTest {
 
             WebElement WTshirt = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(), '₹ 500 - ₹ 999')]")));
             Assert.assertTrue(WTshirt.isDisplayed(), "Women's T-Shirts element is displayed");
-
+    } catch (Exception e) {
+        captureScreenshot("guestCheckoutTest");
+        System.out.println("Exception occurred during Main category: " + e.getMessage());
+        Assert.fail("Test failed: " + e.getMessage());
+    }
 
     }
 }
