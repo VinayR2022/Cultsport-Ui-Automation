@@ -23,7 +23,11 @@ public class MainCategory extends BaseTest {
 try{
             driver.get("https://cultsport.com/");
 
-            driver.findElement(By.xpath("//img[@alt='womens-day-men']")).click();
+    try {
+        driver.findElement(By.xpath("//img[@alt='womens-day-men']")).click();
+    } catch (Exception e) {
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div[action='curefit://gearlist?pageName=mens-sportswear']"))).click();
+    }
 
             WebElement MTshirt = wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Joggers")));
             wait.until(ExpectedConditions.visibilityOf(MTshirt));
@@ -37,8 +41,11 @@ try{
 
             Thread.sleep(2000);
 
-            WebElement element = driver.findElement(By.xpath("//img[@alt='womens-day-women']"));
-            element.click();
+    try {
+        driver.findElement(By.xpath("//img[@alt='womens-day-womens']")).click();
+    } catch (Exception e) {
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div[action='curefit://gearlist?pageName=womens-sportswear']"))).click();
+    }
 
             WebElement Tshirt = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(text(), 'T-shirts')]")));
             Tshirt.click();
