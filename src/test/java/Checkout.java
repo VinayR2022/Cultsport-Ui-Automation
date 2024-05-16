@@ -65,8 +65,16 @@ public class Checkout extends BaseTest {
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(), 'CONTINUE')]"))).click();
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("style-prefix-18e1pgr"))).sendKeys(password);
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class, 'button_text style-prefix-imjule')]"))).click();
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class, 'style-prefix-33rlv')]"))).isDisplayed();
 
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class, 'button_text style-prefix-imjule')]"))).click();
+            while (true) {
+                List<WebElement> elements = driver.findElements(By.className("style-prefix-1lcp925"));
+                if(elements.isEmpty()){
+                    break;
+                }
+               wait.until(ExpectedConditions.elementToBeClickable(elements.get(0))).click();
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class, 'style-prefix-15j5lrk')]"))).click();
+            }
         } catch (Exception e) {
             captureScreenshot("guestCheckoutTest");
             System.out.println("Exception occurred during guestCheckoutTest: " + e.getMessage());

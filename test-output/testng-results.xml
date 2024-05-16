@@ -1,83 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="5" failed="2" skipped="0">
+<testng-results ignored="0" total="8" passed="5" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-06T17:51:22 IST" name="AllTestsSuite" finished-at="2024-05-06T17:53:45 IST" duration-ms="143703">
+  <suite started-at="2024-05-16T15:39:21 IST" name="AllTestsSuite" finished-at="2024-05-16T15:49:20 IST" duration-ms="599586">
     <groups>
     </groups>
-    <test started-at="2024-05-06T17:51:22 IST" name="MainCategory" finished-at="2024-05-06T17:51:41 IST" duration-ms="19479">
+    <test started-at="2024-05-16T15:39:21 IST" name="MainCategory" finished-at="2024-05-16T15:41:18 IST" duration-ms="117803">
       <class name="MainCategory">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:MainCategory@36b4fe2a]" started-at="2024-05-06T17:51:22 IST" name="setUp" finished-at="2024-05-06T17:51:30 IST" duration-ms="8217" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:MainCategory@69fb6037]" started-at="2024-05-16T15:39:21 IST" name="setUp" finished-at="2024-05-16T15:39:33 IST" duration-ms="12712" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="MainCategory()[pri:0, instance:MainCategory@36b4fe2a]" started-at="2024-05-06T17:51:30 IST" name="MainCategory" finished-at="2024-05-06T17:51:41 IST" duration-ms="11108" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MainCategory -->
-      </class> <!-- MainCategory -->
-    </test> <!-- MainCategory -->
-    <test started-at="2024-05-06T17:51:41 IST" name="VerifyPDPs" finished-at="2024-05-06T17:53:30 IST" duration-ms="108971">
-      <class name="VerifyPDPs">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:VerifyPDPs@2e222612]" started-at="2024-05-06T17:51:41 IST" name="setUp" finished-at="2024-05-06T17:51:49 IST" duration-ms="7750" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="CardioPDP()[pri:0, instance:VerifyPDPs@2e222612]" started-at="2024-05-06T17:51:49 IST" name="CardioPDP" finished-at="2024-05-06T17:52:08 IST" duration-ms="19169" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CardioPDP -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:VerifyPDPs@2e222612]" started-at="2024-05-06T17:52:08 IST" name="setUp" finished-at="2024-05-06T17:52:17 IST" duration-ms="8874" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="CyclePDP()[pri:0, instance:VerifyPDPs@2e222612]" started-at="2024-05-06T17:52:17 IST" name="CyclePDP" finished-at="2024-05-06T17:52:30 IST" duration-ms="12646" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CyclePDP -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:VerifyPDPs@2e222612]" started-at="2024-05-06T17:52:30 IST" name="setUp" finished-at="2024-05-06T17:52:43 IST" duration-ms="13714" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="FootwearPDP()[pri:0, instance:VerifyPDPs@2e222612]" started-at="2024-05-06T17:52:43 IST" name="FootwearPDP" finished-at="2024-05-06T17:53:01 IST" duration-ms="17317" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- FootwearPDP -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:VerifyPDPs@2e222612]" started-at="2024-05-06T17:53:01 IST" name="setUp" finished-at="2024-05-06T17:53:10 IST" duration-ms="9126" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="MenPDP()[pri:0, instance:VerifyPDPs@2e222612]" started-at="2024-05-06T17:53:10 IST" name="MenPDP" finished-at="2024-05-06T17:53:20 IST" duration-ms="9606" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MenPDP -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:VerifyPDPs@2e222612]" started-at="2024-05-06T17:53:20 IST" name="setUp" finished-at="2024-05-06T17:53:28 IST" duration-ms="8353" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="WomenPDP()[pri:0, instance:VerifyPDPs@2e222612]" started-at="2024-05-06T17:53:28 IST" name="WomenPDP" finished-at="2024-05-06T17:53:30 IST" duration-ms="2243" status="FAIL">
+        <test-method signature="MainCategory()[pri:0, instance:MainCategory@69fb6037]" started-at="2024-05-16T15:39:34 IST" name="MainCategory" finished-at="2024-05-16T15:41:05 IST" duration-ms="91951" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Test failed: An unknown server-side error occurred while processing the command. Original error: chrome not reachable
+              <![CDATA[Test failed: no such element: Unable to locate element: {"method":"xpath","selector":"//img[@alt='womens-day-men']"}
   (Session info: chrome=91.0.4472.114)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.5.0', revision: 'fe167b119a'
 System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.4.1', java.version: '17.0.1'
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [fd97227c-1f9c-45fb-9c3a-ffba4e5a6bc7, executeScript {script=window.scrollBy(0, 500);, args=[]}]
+Command: [36300dbc-a122-4905-a835-0a18b261fd0d, findElement {using=xpath, value=//img[@alt='womens-day-men']}]
 Capabilities {appium:appActivity: com.google.android.apps.chr..., appium:appPackage: com.android.chrome, appium:databaseEnabled: false, appium:desired: {browserName: chrome, browserVersion: 106, deviceName: N000TA1183962301141, goog:chromeOptions: {args: [], extensions: []}, platformName: android}, appium:deviceApiLevel: 32, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3040, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 12, appium:statBarHeight: 84, appium:takesScreenshot: true, appium:viewportRect: {height: 2900, left: 0, top: 84, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, browserName: chrome, browserVersion: 106, goog:chromeOptions: {args: [], extensions: []}, platformName: ANDROID}
-Session ID: fd97227c-1f9c-45fb-9c3a-ffba4e5a6bc7]]>
+Session ID: 36300dbc-a122-4905-a835-0a18b261fd0d]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Test failed: An unknown server-side error occurred while processing the command. Original error: chrome not reachable
+              <![CDATA[java.lang.AssertionError: Test failed: no such element: Unable to locate element: {"method":"xpath","selector":"//img[@alt='womens-day-men']"}
   (Session info: chrome=91.0.4472.114)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.5.0', revision: 'fe167b119a'
 System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.4.1', java.version: '17.0.1'
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [fd97227c-1f9c-45fb-9c3a-ffba4e5a6bc7, executeScript {script=window.scrollBy(0, 500);, args=[]}]
+Command: [36300dbc-a122-4905-a835-0a18b261fd0d, findElement {using=xpath, value=//img[@alt='womens-day-men']}]
 Capabilities {appium:appActivity: com.google.android.apps.chr..., appium:appPackage: com.android.chrome, appium:databaseEnabled: false, appium:desired: {browserName: chrome, browserVersion: 106, deviceName: N000TA1183962301141, goog:chromeOptions: {args: [], extensions: []}, platformName: android}, appium:deviceApiLevel: 32, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3040, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 12, appium:statBarHeight: 84, appium:takesScreenshot: true, appium:viewportRect: {height: 2900, left: 0, top: 84, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, browserName: chrome, browserVersion: 106, goog:chromeOptions: {args: [], extensions: []}, platformName: ANDROID}
-Session ID: fd97227c-1f9c-45fb-9c3a-ffba4e5a6bc7
+Session ID: 36300dbc-a122-4905-a835-0a18b261fd0d
 at org.testng.Assert.fail(Assert.java:110)
-at VerifyPDPs.WomenPDP(VerifyPDPs.java:65)
+at MainCategory.MainCategory(MainCategory.java:51)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -110,16 +68,187 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- WomenPDP -->
-      </class> <!-- VerifyPDPs -->
-    </test> <!-- VerifyPDPs -->
-    <test started-at="2024-05-06T17:53:30 IST" name="Checkout" finished-at="2024-05-06T17:53:45 IST" duration-ms="15161">
-      <class name="Checkout">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Checkout@346d61be]" started-at="2024-05-06T17:53:30 IST" name="setUp" finished-at="2024-05-06T17:53:39 IST" duration-ms="8317" status="PASS">
+        </test-method> <!-- MainCategory -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:MainCategory@69fb6037]" started-at="2024-05-16T15:41:06 IST" name="tearDown" finished-at="2024-05-16T15:41:18 IST" duration-ms="12957" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=MainCategory status=FAILURE method=MainCategory.MainCategory()[pri:0, instance:MainCategory@69fb6037] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- MainCategory -->
+    </test> <!-- MainCategory -->
+    <test started-at="2024-05-16T15:41:19 IST" name="VerifyPDPs" finished-at="2024-05-16T15:48:30 IST" duration-ms="431559">
+      <class name="VerifyPDPs">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:VerifyPDPs@346d61be]" started-at="2024-05-16T15:41:19 IST" name="setUp" finished-at="2024-05-16T15:41:47 IST" duration-ms="28619" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="guestCheckoutTest()[pri:0, instance:Checkout@346d61be]" started-at="2024-05-06T17:53:39 IST" name="guestCheckoutTest" finished-at="2024-05-06T17:53:44 IST" duration-ms="5821" status="FAIL">
+        <test-method signature="CardioPDP()[pri:0, instance:VerifyPDPs@346d61be]" started-at="2024-05-16T15:41:47 IST" name="CardioPDP" finished-at="2024-05-16T15:44:00 IST" duration-ms="133086" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CardioPDP -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:VerifyPDPs@346d61be]" started-at="2024-05-16T15:44:00 IST" name="tearDown" finished-at="2024-05-16T15:44:11 IST" duration-ms="10814" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CardioPDP status=SUCCESS method=VerifyPDPs.CardioPDP()[pri:0, instance:VerifyPDPs@346d61be] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:VerifyPDPs@346d61be]" started-at="2024-05-16T15:44:11 IST" name="setUp" finished-at="2024-05-16T15:44:39 IST" duration-ms="28311" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="CyclePDP()[pri:0, instance:VerifyPDPs@346d61be]" started-at="2024-05-16T15:44:39 IST" name="CyclePDP" finished-at="2024-05-16T15:46:55 IST" duration-ms="135869" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CyclePDP -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:VerifyPDPs@346d61be]" started-at="2024-05-16T15:46:55 IST" name="tearDown" finished-at="2024-05-16T15:46:56 IST" duration-ms="981" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=CyclePDP status=SUCCESS method=VerifyPDPs.CyclePDP()[pri:0, instance:VerifyPDPs@346d61be] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:VerifyPDPs@346d61be]" started-at="2024-05-16T15:46:56 IST" name="setUp" finished-at="2024-05-16T15:47:17 IST" duration-ms="20717" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="FootwearPDP()[pri:0, instance:VerifyPDPs@346d61be]" started-at="2024-05-16T15:47:17 IST" name="FootwearPDP" finished-at="2024-05-16T15:47:38 IST" duration-ms="20534" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FootwearPDP -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:VerifyPDPs@346d61be]" started-at="2024-05-16T15:47:38 IST" name="tearDown" finished-at="2024-05-16T15:47:39 IST" duration-ms="938" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=FootwearPDP status=SUCCESS method=VerifyPDPs.FootwearPDP()[pri:0, instance:VerifyPDPs@346d61be] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:VerifyPDPs@346d61be]" started-at="2024-05-16T15:47:39 IST" name="setUp" finished-at="2024-05-16T15:47:50 IST" duration-ms="11081" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="MenPDP()[pri:0, instance:VerifyPDPs@346d61be]" started-at="2024-05-16T15:47:50 IST" name="MenPDP" finished-at="2024-05-16T15:48:05 IST" duration-ms="15676" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.className: style-prefix-8ha1uc (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.4.1', java.version: '17.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:appActivity: com.google.android.apps.chr..., appium:appPackage: com.android.chrome, appium:databaseEnabled: false, appium:desired: {browserName: chrome, browserVersion: 106, deviceName: N000TA1183962301141, goog:chromeOptions: {args: [], extensions: []}, platformName: android}, appium:deviceApiLevel: 32, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3040, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 12, appium:statBarHeight: 84, appium:takesScreenshot: true, appium:viewportRect: {height: 2900, left: 0, top: 84, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, browserName: chrome, browserVersion: 106, goog:chromeOptions: {args: [], extensions: []}, platformName: ANDROID}
+Session ID: 0cc4f906-8eb4-4737-83ba-ca28212f9a66]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.className: style-prefix-8ha1uc (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.5.0', revision: 'fe167b119a'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.4.1', java.version: '17.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:appActivity: com.google.android.apps.chr..., appium:appPackage: com.android.chrome, appium:databaseEnabled: false, appium:desired: {browserName: chrome, browserVersion: 106, deviceName: N000TA1183962301141, goog:chromeOptions: {args: [], extensions: []}, platformName: android}, appium:deviceApiLevel: 32, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3040, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 12, appium:statBarHeight: 84, appium:takesScreenshot: true, appium:viewportRect: {height: 2900, left: 0, top: 84, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, browserName: chrome, browserVersion: 106, goog:chromeOptions: {args: [], extensions: []}, platformName: ANDROID}
+Session ID: 0cc4f906-8eb4-4737-83ba-ca28212f9a66
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at VerifyPDPs.MenPDP(VerifyPDPs.java:23)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MenPDP -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:VerifyPDPs@346d61be]" started-at="2024-05-16T15:48:06 IST" name="tearDown" finished-at="2024-05-16T15:48:10 IST" duration-ms="3418" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=MenPDP status=FAILURE method=VerifyPDPs.MenPDP()[pri:0, instance:VerifyPDPs@346d61be] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:VerifyPDPs@346d61be]" started-at="2024-05-16T15:48:10 IST" name="setUp" finished-at="2024-05-16T15:48:19 IST" duration-ms="9056" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="WomenPDP()[pri:0, instance:VerifyPDPs@346d61be]" started-at="2024-05-16T15:48:19 IST" name="WomenPDP" finished-at="2024-05-16T15:48:30 IST" duration-ms="10935" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WomenPDP -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:VerifyPDPs@346d61be]" started-at="2024-05-16T15:48:30 IST" name="tearDown" finished-at="2024-05-16T15:48:30 IST" duration-ms="489" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=WomenPDP status=SUCCESS method=VerifyPDPs.WomenPDP()[pri:0, instance:VerifyPDPs@346d61be] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- VerifyPDPs -->
+    </test> <!-- VerifyPDPs -->
+    <test started-at="2024-05-16T15:48:30 IST" name="Checkout" finished-at="2024-05-16T15:49:20 IST" duration-ms="50093">
+      <class name="Checkout">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Checkout@2f8dad04]" started-at="2024-05-16T15:48:30 IST" name="setUp" finished-at="2024-05-16T15:48:38 IST" duration-ms="7572" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="guestCheckoutTest(java.lang.String,java.lang.String)[pri:0, instance:Checkout@2f8dad04]" started-at="2024-05-16T15:48:38 IST" name="guestCheckoutTest" data-provider="checkoutData" finished-at="2024-05-16T15:48:52 IST" duration-ms="13915" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[qa.manual3@curefit.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[132465]]>
+              </value>
+            </param>
+          </params>
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Test failed: stale element reference: element is not attached to the page document
@@ -128,10 +257,10 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: '4.5.0', revision: 'fe167b119a'
 System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.4.1', java.version: '17.0.1'
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [22511aad-63bb-47ce-ae4c-ad5d859851ab, clickElement {id=ae49a820-41e5-4805-964f-425d99a73d9f}]
+Command: [c11017fa-8435-43eb-afa6-384becf51609, clickElement {id=0a7b4eda-cecd-47b7-b923-3d5935d70a51}]
 Capabilities {appium:appActivity: com.google.android.apps.chr..., appium:appPackage: com.android.chrome, appium:databaseEnabled: false, appium:desired: {browserName: chrome, browserVersion: 106, deviceName: N000TA1183962301141, goog:chromeOptions: {args: [], extensions: []}, platformName: android}, appium:deviceApiLevel: 32, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3040, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 12, appium:statBarHeight: 84, appium:takesScreenshot: true, appium:viewportRect: {height: 2900, left: 0, top: 84, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, browserName: chrome, browserVersion: 106, goog:chromeOptions: {args: [], extensions: []}, platformName: ANDROID}
-Element: [[AndroidDriver: chrome on ANDROID (22511aad-63bb-47ce-ae4c-ad5d859851ab)] -> xpath: //*[contains(text(), 'Existing User?')]]
-Session ID: 22511aad-63bb-47ce-ae4c-ad5d859851ab]]>
+Element: [[AndroidDriver: chrome on ANDROID (c11017fa-8435-43eb-afa6-384becf51609)] -> xpath: //div[contains(@class, 'button_text style-prefix-imjule')]]
+Session ID: c11017fa-8435-43eb-afa6-384becf51609]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.AssertionError: Test failed: stale element reference: element is not attached to the page document
@@ -140,12 +269,12 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: '4.5.0', revision: 'fe167b119a'
 System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.4.1', java.version: '17.0.1'
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [22511aad-63bb-47ce-ae4c-ad5d859851ab, clickElement {id=ae49a820-41e5-4805-964f-425d99a73d9f}]
+Command: [c11017fa-8435-43eb-afa6-384becf51609, clickElement {id=0a7b4eda-cecd-47b7-b923-3d5935d70a51}]
 Capabilities {appium:appActivity: com.google.android.apps.chr..., appium:appPackage: com.android.chrome, appium:databaseEnabled: false, appium:desired: {browserName: chrome, browserVersion: 106, deviceName: N000TA1183962301141, goog:chromeOptions: {args: [], extensions: []}, platformName: android}, appium:deviceApiLevel: 32, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3040, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 12, appium:statBarHeight: 84, appium:takesScreenshot: true, appium:viewportRect: {height: 2900, left: 0, top: 84, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, browserName: chrome, browserVersion: 106, goog:chromeOptions: {args: [], extensions: []}, platformName: ANDROID}
-Element: [[AndroidDriver: chrome on ANDROID (22511aad-63bb-47ce-ae4c-ad5d859851ab)] -> xpath: //*[contains(text(), 'Existing User?')]]
-Session ID: 22511aad-63bb-47ce-ae4c-ad5d859851ab
+Element: [[AndroidDriver: chrome on ANDROID (c11017fa-8435-43eb-afa6-384becf51609)] -> xpath: //div[contains(@class, 'button_text style-prefix-imjule')]]
+Session ID: c11017fa-8435-43eb-afa6-384becf51609
 at org.testng.Assert.fail(Assert.java:110)
-at Checkout.guestCheckoutTest(Checkout.java:54)
+at Checkout.guestCheckoutTest(Checkout.java:73)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -179,11 +308,42 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- guestCheckoutTest -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Checkout@346d61be]" started-at="2024-05-06T17:53:44 IST" name="tearDown" finished-at="2024-05-06T17:53:45 IST" duration-ms="975" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Checkout@2f8dad04]" started-at="2024-05-16T15:48:52 IST" name="tearDown" finished-at="2024-05-16T15:48:53 IST" duration-ms="1146" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=guestCheckoutTest status=FAILURE method=Checkout.guestCheckoutTest()[pri:0, instance:Checkout@346d61be] output={null}]]]>
+                <![CDATA[[TestResult name=guestCheckoutTest status=FAILURE method=Checkout.guestCheckoutTest(java.lang.String,java.lang.String)[pri:0, instance:Checkout@2f8dad04] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Checkout@2f8dad04]" started-at="2024-05-16T15:48:53 IST" name="setUp" finished-at="2024-05-16T15:49:00 IST" duration-ms="7181" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="guestCheckoutTest(java.lang.String,java.lang.String)[pri:0, instance:Checkout@2f8dad04]" started-at="2024-05-16T15:49:00 IST" name="guestCheckoutTest" data-provider="checkoutData" finished-at="2024-05-16T15:49:19 IST" duration-ms="19227" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[culttest@curefit.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[132465]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- guestCheckoutTest -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Checkout@2f8dad04]" started-at="2024-05-16T15:49:19 IST" name="tearDown" finished-at="2024-05-16T15:49:20 IST" duration-ms="961" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=guestCheckoutTest status=SUCCESS method=Checkout.guestCheckoutTest(java.lang.String,java.lang.String)[pri:0, instance:Checkout@2f8dad04] output={null}]]]>
               </value>
             </param>
           </params>
